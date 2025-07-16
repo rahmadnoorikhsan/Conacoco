@@ -89,7 +89,7 @@ const NewsSection = () => {
                   <div className="md:w-3/5 p-8 sm:p-12 flex flex-col justify-between">
                     <div>
                       <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-                        "{article.excerpt}"
+                        &quot;{article.excerpt}&quot;
                       </p>
                       <h3 className="font-bold text-white text-lg">
                         {article.title}
