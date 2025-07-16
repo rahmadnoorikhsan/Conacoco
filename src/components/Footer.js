@@ -232,7 +232,7 @@ export default function Footer() {
               <Image src="/conacoco.png" alt="Conacoco Logo" width={150} height={60} />
             </Link>
             <p className="text-base">
-              Conacoco - Indonesia's natural wealth meets global innovation.
+              Conacoco - Indonesia&apos;s natural wealth meets global innovation.
             </p>
           </div>
 
