@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +12,95 @@
   }
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(-2%, 2%);
+  }
+}
+
+.ken-burns-effect {
+  animation: kenburns 15s ease-out infinite alternate;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } 
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f59e0b !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f59e0b !important; /* Warna kuning */
+  transform: scale(1.2);
+}
+
+@keyframes wave {
+  0% {
+    d: path("M0,64 C128,128 384,0 512,64 S896,192 1024,128 S1280,64 1440,96 L1440,0 L0,0 Z");
+  }
+  50% {
+    d: path("M0,96 C128,64 384,192 512,128 S896,0 1024,64 S1280,128 1440,96 L1440,0 L0,0 Z");
+  }
+  100% {
+    d: path("M0,64 C128,128 384,0 512,64 S896,192 1024,128 S1280,64 1440,96 L1440,0 L0,0 Z");
+  }
+}
+
+.animate-wave {
+  animation: wave 15s linear infinite;
+}
+
+/* ... (kode CSS Anda yang sudah ada) ... */
+
+/* Gaya untuk Masonry Grid */
+.my-masonry-grid {
+  display: -webkit-box; /* Old versions of Fx */
+  display: -moz-box;    /* Old versions of Fx */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
 }

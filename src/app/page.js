@@ -1,103 +1,101 @@
-import Image from "next/image";
+import HeroSection from "@/components/HeroSections";
+import CompanyOverview from "@/components/CompanyOverview";
+import OurVision from "@/components/OurVision";
+import OurMission from "@/components/OurMission";
+import Gallery from "@/components/Gallery";
+import ProductsPage from "@/components/ProductPage";
+import NewsSection from "@/components/NewsSection";
+import TradeInformation from "@/components/TradeInformation";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const backgroundImages = [
+    'https://conacoco.com/wp-content/uploads/2022/10/Gallery-9.jpg',
+    'https://conacoco.com/wp-content/uploads/2022/10/Gallery-7.jpg',
+    'https://conacoco.com/wp-content/uploads/2022/10/Gallery-4.jpg'
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  const missionImages = [
+    'https://conacoco.com/wp-content/uploads/2025/04/4-2.png',
+    'https://conacoco.com/wp-content/uploads/2025/04/13.png',
+    'https://conacoco.com/wp-content/uploads/2025/04/18.png',
+  ];
+
+  const galleryImagesUrl = [
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/14.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/15.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/4-2.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/13.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/18.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/2-1.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/11.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/12.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/1-1.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/3-1.png', width: 1024, height: 768 },
+    { src: 'https://conacoco.com/wp-content/uploads/2025/04/5-1.png', width: 1024, height: 768 }
+  ];
+
+  const productsData = [
+    {
+      id: 1,
+      image: 'https://conacoco.com/wp-content/uploads/2025/04/2-1.png',
+      title: 'PILLOW CHARCOAL BBQ',
+      description: 'High-Quality Pillow Charcoal is one of our best-selling products. When it comes to quality, it delivers outstanding performance with long-lasting heat, low ash, and clean burning. Trusted by BBQ lovers and professionals worldwide, pillow charcoal is made from pure coconut shell charcoal, processed hygienically and in an eco-friendly manner.',
+      specifications: {
+        "Raw Material": "Coconut shell charcoal",
+        "Shape": "Pillow (cushion-shaped)",
+        "Fixed Carbon": ">70%",
+        "Ash Content": "<5%",
+        "Moisture": "<8%",
+        "Packing": "5 kg, 10 kg, 20 kg (customizable)"
+      }
+    },
+    {
+      id: 2,
+      image: 'https://conacoco.com/wp-content/uploads/2025/04/Desain-tanpa-judul.png',
+      title: 'COCONUT SHELL CHARCOAL',
+      description: 'Coconut Shell Charcoal is made from 100% selected natural coconut shells, with no added chemicals. Perfect for BBQ, shisha/hookah, and the food industry.',
+      specifications: {
+        "Raw Material": "100% Coconut Shell",
+        "Fixed Carbon": "≥ 75%",
+        "Ash Content": "≤ 3%",
+        "Moisture": "≤ 12%",
+        "Volatile Matter": "≤ 15%",
+        "Size & Packaging": "3-5 mm, 5-10 mm"
+      }
+    },
+    {
+      id: 3,
+      image: 'https://conacoco.com/wp-content/uploads/2022/10/Product-8.jpg',
+      title: 'ROUND / STICK SHAPE',
+      description: 'Hardwood charcoal is our best-selling product. In terms of quality, charcoal made of hardwood is always a great choice, as it offers much better quality than other options.',
+      specifications: {
+        "Packaging": "Retail pack or bulk",
+        "Presentation": "PUD IQF/Semi-IQF/Block",
+        "Glazing": "0-50%",
+        "Additives": "Chemical free",
+        "Specific Gravity": "0.915",
+        "Density (kg/m3)": "920",
+      }
+    },
+  ];
+
+  return (
+    <main>
+      <HeroSection
+        headline={'Welcome to Conacoco'}
+        subtitle={'Your trusted partner for high-quality coconut charcoal briquettes from Indonesia'}
+        imageUrls={backgroundImages} />
+      <CompanyOverview
+        description={"CONACOCO is a trusted brand under Malqorporate Group, specializing in the production and global distribution of premium-quality coconut charcoal. Headquartered in Indonesia—one of the world’s largest coconut-producing countries—we transform coconut shells into sustainable, eco-friendly charcoal products that meet international standards"} />
+      <OurVision />
+      <OurMission
+        missionImages={missionImages}
+      />
+      <Gallery images={galleryImagesUrl} />
+      <ProductsPage
+        productsData={productsData} />
+      <TradeInformation />
+      <NewsSection />
+    </main>
   );
 }
