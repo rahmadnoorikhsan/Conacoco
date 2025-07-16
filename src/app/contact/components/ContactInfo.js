@@ -11,7 +11,7 @@ const ContactInfo = () => {
             transition={{ duration: 0.8 }}
             className="relative"
         >
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Let's Talk Business</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Let&apos;s talk Bussiness</h1>
             <p className="mt-4 text-lg leading-8 text-gray-300">
                 We are ready to provide the best quality charcoal for your needs. Contact us for quotes, samples, or partnership opportunities.
             </p>
