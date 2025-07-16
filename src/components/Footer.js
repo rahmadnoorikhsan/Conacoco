@@ -263,7 +263,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold text-yellow-500 mb-5 pb-2 border-b-2 border-yellow-400">Slogan</h3>
             <blockquote className="mt-4 text-base italic">
-              "Sparking Partnerships, Building Sustainability"
+              &quot;Sparking Partnerships, Building Sustainability&quot;
             </blockquote>
           </div>
         </div>
